@@ -22,7 +22,7 @@ const Login = () => {
 
     // I'll do the login Auth using Fetch and registration Auth using Axios
     try {
-      const res = await fetch("http://localhost:3000/api/login", {
+      const res = await fetch("https://task-master-backend-hghb.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

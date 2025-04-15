@@ -26,7 +26,7 @@ const ToDo = () => {
 
   const createToDo = async (data) => {
     try {
-      const res = await fetch("http://localhost:3000/api/toDo/create-to-do", {
+      const res = await fetch("https://task-master-backend-hghb.onrender.com/api/toDo/create-to-do", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const ToDo = () => {
   const getToDos = async () => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/toDo/get-to-do/${getUser()?.userId}`,
+        `https://task-master-backend-hghb.onrender.com/api/toDo/get-to-do/${getUser()?.userId}`,
         {
           method: "GET",
           headers: {
@@ -78,7 +78,7 @@ const ToDo = () => {
   const handleDelete = async (item) => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/toDo/delete-to-do/${item._id}`,
+        `https://task-master-backend-hghb.onrender.com/api/toDo/delete-to-do/${item._id}`,
         {
           method: "DELETE",
           headers: {
@@ -120,7 +120,7 @@ const ToDo = () => {
   const updateTodo = async () => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/toDo/update-to-do/${editingTodo._id}`,
+        `https://task-master-backend-hghb.onrender.com/api/toDo/update-to-do/${editingTodo._id}`,
         {
           method: "PATCH",
           headers: {
@@ -160,7 +160,7 @@ const ToDo = () => {
   const handleCompleted = async (item) => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/toDo/update-to-do/${item._id}`,
+        `https://task-master-backend-hghb.onrender.com/api/toDo/update-to-do/${item._id}`,
         {
           method: "PATCH",
           headers: {

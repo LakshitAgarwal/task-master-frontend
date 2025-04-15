@@ -17,7 +17,7 @@ const Register = () => {
 
   const registerUser = async (userData) => {
     try {
-      const res = await fetch("http://localhost:3000/api/register", {
+      const res = await fetch("https://task-master-backend-hghb.onrender.com/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
