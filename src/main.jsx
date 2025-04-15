@@ -10,7 +10,7 @@ import {
 import Landing from "./Components/Landing.jsx";
 import Login from "./Components/Login.jsx";
 import Register from "./Components/Register.jsx";
-import ToDo from "./Components/toDo.jsx";
+import ToDo from "./Components/ToDo.jsx";
 
 const appRouter = createBrowserRouter([
   {
