@@ -26,14 +26,17 @@ const ToDo = () => {
 
   const createToDo = async (data) => {
     try {
-      const res = await fetch("https://task-master-backend-hghb.onrender.com/api/toDo/create-to-do", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: getUser()?.token,
-        },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        "https://task-master-backend-hghb.onrender.com/api/toDo/create-to-do",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: getUser()?.token,
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await res.json();
 
@@ -54,7 +57,9 @@ const ToDo = () => {
   const getToDos = async () => {
     try {
       const res = await fetch(
-        `https://task-master-backend-hghb.onrender.com/api/toDo/get-to-do/${getUser()?.userId}`,
+        `https://task-master-backend-hghb.onrender.com/api/toDo/get-to-do/${
+          getUser()?.userId
+        }`,
         {
           method: "GET",
           headers: {
@@ -67,6 +72,14 @@ const ToDo = () => {
       if (res.ok) {
         console.log("Your To-Dos: ", toDos);
         setAllToDos(toDos);
+
+        // Also update the filtered list based on current search query
+        if (searchQuery.length > 0) {
+          const todosFiltered = toDos.filter((todo) =>
+            todo.title.toLowerCase().includes(searchQuery.toLowerCase())
+          );
+          setFilteredList(todosFiltered);
+        }
       } else {
         console.error("Error fetching todos:", toDos.message);
       }
