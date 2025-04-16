@@ -49,7 +49,7 @@ const Footer = () => {
               <FaLinkedin size={18} />
             </a>
             <a
-              href="lakshit7811@gmail.com"
+              href="mailto:lakshit7811@gmail.com"
               className="text-gray-500 hover:text-indigo-600 transition-colors"
               aria-label="Email"
             >
