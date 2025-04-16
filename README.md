@@ -6,6 +6,12 @@ A full-stack **Task Manager** application built using the **MERN** stack (MongoD
 
 ## 🎬 Demo
 
+
+
+https://github.com/user-attachments/assets/45024beb-3b72-45b5-960a-f958914f74d8
+
+
+
 ---
 
 ## 🚀 Features
